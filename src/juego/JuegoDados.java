@@ -19,14 +19,18 @@ public class JuegoDados {
 	         * Se genera el valor entre 0 y el valor especificado, por esto se suma 1,
 	         * para que nunca salga 0. Además se imprimen los resultados.
 	         */
-	        valorDado1 = dado.nextInt(6)+1;
-	        valorDado2 = dado.nextInt(6)+1;
+	        valorDado1 = tirada(dado);
+	        valorDado2 = tirada(dado);
 	        System.out.println( "Dado 1 - Dado 2");
 	        System.out.println("  "+valorDado1+" 	   "+valorDado2);
 	        tiradas++;
         }
         // Al terminar se imprimen las tiradas.
         System.out.println("Número de tiradas: " + tiradas);
+	}
+
+	public static int tirada(Random dado) {
+		return dado.nextInt(6)+1;
 	}
 
 }
