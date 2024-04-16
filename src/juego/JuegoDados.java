@@ -21,7 +21,14 @@ public class JuegoDados {
 	        tiradas++;
         }
         // Al terminar se imprimen las tiradas.
-        System.out.println("Número de tiradas: " + tiradas);
+        mostrarTiradas(tiradas);
+	}
+	/**
+	 * Método que imprime el número de tiradas
+	 * @param tiradas Entero con el número de tiradas.
+	 */
+	public static void mostrarTiradas(int tiradas) {
+		System.out.println("Número de tiradas: " + tiradas);
 	}
 	/**
 	 * Método que imprime los resultados de las tiradas.
