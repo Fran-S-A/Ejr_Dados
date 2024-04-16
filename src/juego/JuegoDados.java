@@ -15,8 +15,8 @@ public class JuegoDados {
          * Se utiliza un bucle para realizar tiradas hasta que ambos valores sean 6.
          */
         while (valorDado1 != 6 || valorDado2 != 6){
-	        valorDado1 = tirada(dado);
-	        valorDado2 = tirada(dado);
+	        valorDado1 = tirarDado(dado);
+	        valorDado2 = tirarDado(dado);
 	        mostrarResultados(valorDado1, valorDado2);
 	        tiradas++;
         }
@@ -38,7 +38,7 @@ public class JuegoDados {
 	 * @param dado Objeto Random
 	 * @return Valor del dado
 	 */
-	public static int tirada(Random dado) {
+	public static int tirarDado(Random dado) {
 		return dado.nextInt(6)+1;
 	}
 
