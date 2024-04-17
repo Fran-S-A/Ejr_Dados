@@ -15,20 +15,13 @@ public class JuegoDados {
          * Se utiliza un bucle para realizar tiradas hasta que ambos valores sean 6.
          */
         while (valorDado1 != 6 || valorDado2 != 6){
-	        valorDado1 = tirarDado(dado);
-	        valorDado2 = tirarDado(dado);
+	        valorDado1 = tirada(dado);
+	        valorDado2 = tirada(dado);
 	        mostrarResultados(valorDado1, valorDado2);
 	        tiradas++;
         }
         // Al terminar se imprimen las tiradas.
-        mostrarTiradas(tiradas);
-	}
-	/**
-	 * Método que imprime el número de tiradas
-	 * @param tiradas Entero con el número de tiradas.
-	 */
-	public static void mostrarTiradas(int tiradas) {
-		System.out.println("Número de tiradas: " + tiradas);
+        System.out.println("Número de tiradas: " + tiradas);
 	}
 	/**
 	 * Método que imprime los resultados de las tiradas.
@@ -45,7 +38,7 @@ public class JuegoDados {
 	 * @param dado Objeto Random
 	 * @return Valor del dado
 	 */
-	public static int tirarDado(Random dado) {
+	public static int tirada(Random dado) {
 		return dado.nextInt(6)+1;
 	}
 
